@@ -6,9 +6,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Antic+Didone|Arapey|Josefin+Sans" 
 	rel="stylesheet">
 		
-		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script type="text/javascript" src=d3.min.js></script>
 		<title>Nitrogen Conundrum</title>
-	</head>
 
 
 <style>
@@ -32,18 +31,7 @@
     margin-left: 15px;
   }
   
-  #caption1 {
-    width: 250px;
-  }
-  
-  #caption2 {
-    width: 250px;
-  }
-  
-  #caption3 {
-    width: 250px;
-  }
- 
+
   #shape {
     width: 500px;
     height: 125px;
@@ -52,11 +40,33 @@
     margin-top: 20px;
   }
 	#chart {
-		width: 100px;
-		height:   800px;
+		width: 800px;
+		height:   375px;
 		margin-left: 70px;
 		margin-top: -70px;
 	}
+	
+	#info1 {
+	 width: 25px;
+	 height: 15px;
+	 margin-left: 100px;
+	 margin-top: 70px;
+	}
+	
+	#info2 {
+	 width: 25px;
+	 height: 15px;
+	 margin-left: 100px;
+	 margin-top: 170px;
+	}
+	
+	#info3 {
+	 width: 25px;
+	 height: 15px;
+	 margin-left: 1000px;
+	 margin-top: 270px;
+	}
+	  
  
 	path {
   		stroke-width: 2;
@@ -103,6 +113,48 @@
     margin-top: -50px;
   }
     
+  .info1{
+    font-family: Josefin Sans;
+    font-size: 1em;
+    color: #4f361a;
+    line-height: 1.3em;
+    letter-spacing: 0;
+    text-align: left;
+    text-indent: 0;
+    width: 200px;
+    height: 150px;
+    margin-left:20px;
+    margin-top: -330px;
+  }
+  
+ .info2{
+    font-family: Josefin Sans;
+    font-size: 1em;
+    color: #4f361a;
+    line-height: 1.3em;
+    letter-spacing: 0;
+    text-align: left;
+    text-indent: 0;
+    width: 200px;
+    height: 150px;
+    margin-left: 320px;
+    margin-top: -168px;
+    }
+  
+ .info3{
+    font-family: Josefin Sans;
+    font-size: 1em;
+    color: #4f361a;
+    line-height: 1.3em;
+    letter-spacing: 0;
+    text-align: left;
+    text-indent: 0;
+    width: 200px;
+    height: 150px;
+    margin-left: 620px;
+    margin-top: -168px;
+    }    
+    
   .title {
     font-family: Antic Didone;
     font-size: 4em;
@@ -112,7 +164,7 @@
     text-align: left;
     height: 40px;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 0px;
   }
   
   .subtitle {
@@ -186,7 +238,8 @@
    		-webkit-transition: r 0.5s;
 	}
  
-</style>
+  </style>
+</head>  
   
 <body>
 <div id="shape">
@@ -202,8 +255,8 @@
   </div>
   </div>
   
-    <div class="cloumn">
-      <p class="text">Nitrogen is a plant limiting factor. While nitrogen (N) is abundant in the air, the atom is only utilized by plants, and therefore life, in a specific and limited form found in the soil.  For plants, the more usable nitrogen it has access to, the better the plant grows. In terms of agriculture, the more nitrogen a crop has access to, the more food is produced. Prior to the discovery of synthetically produce nitrogen, </p>
+    <div class="column">
+      <p class="text">Nitrogen is a necessary element for plant growth. While nitrogen (N) is abundant in the air, the atom is only able to be utilized by plants, and therefore life, in a specific and limited form found in the soil.  For plants, the more usable nitrogen it has access to, the better the plant grows. In terms of agriculture, the more nitrogen a crop has access to, the more food is produced. Prior to the discovery of synthetically produce nitrogen, the world population was limited by the amount of crops grown on natural sources of N. However, with the advent of synthetic nitrogen, crop productivity rose and more mouths could be fed on less land. Yet this application comes at a cost. The more chemicals applied to the landscape, the greater risk of environmental harm. The graph below shows how crop production has risen over the years with increase nitrogen application.</p>
     </div>
 
 
@@ -219,29 +272,103 @@
     </div> 
    </div>
    
-    <div id="chart"></div>
-    
-  <div id"containerpic">
-    <div class"column"
-      <img id="caption1" src="desktop/caption1.jpg" />
+    <div id="chart">
+      <svg width="100" height="800">
+      <g transform="translate(50,30)">
+        <path stroke=#ffb517 ></path>
+        <path stroke=#3e6549 ></path>
+      <g class="x axis" transform=translate(0,1960)>
+        <g class="tick" transform="translate(40,0)" style="opacity: 1;">
+            <line y2="6" x2="0"></line> 
+            <text dy=".7em" y="9" x="0" style="text-anchor: middle;">1960</text>        </g
+        <g class="tick" transform="translate(140,0)" style="opacity: 1;">
+            <line y2="6" x2="0"></line> 
+            <text dy=".7em" y="9" x="0" style="text-anchor: middle;">1970</text>
+        <g class="tick" transform="translate(140,0)" style="opacity: 1;">
+            <line y2="6" x2="0"></line> 
+            <text dy=".7em" y="9" x="0" style="text-anchor: middle;">1980</text>
+        <g class="tick" transform="translate(140,0)" style="opacity: 1;">
+            <line y2="6" x2="0"></line> 
+            <text dy=".7em" y="9" x="0" style="text-anchor: middle;">1980</text>
+        <g class="tick" transform="translate(140,0)" style="opacity: 1;">
+            <line y2="6" x2="0"></line> 
+            <text dy=".7em" y="9" x="0" style="text-anchor: middle;">1990</text>
+        <g class="tick" transform="translate(140,0)" style="opacity: 1;">
+            <line y2="6" x2="0"></line> 
+            <text dy=".7em" y="9" x="0" style="text-anchor: middle;">2000</text>
+        <g class="tick" transform="translate(140,0)" style="opacity: 1;">
+            <line y2="6" x2="0"></line>
+            <text dy=".7em" y="9" x="0" style="text-anchor: middle;">2010</text>
+      <path class="domain"d="M0,6V0H1130V6"></path>
+      </g>  
+      
+      <g class="y axis"> 
+        <g class="tick" transform="translate(0,200)" style="opacity: 1;">
+            <line x2="-6" y2="0"></line> 
+            <text dy=".4em" x="-9" y="0" style="text-anchor: end;">3,000</text>
+            </g>
+        <g class="tick" transform="translate(160,0)" style="opacity: 1;">
+            <line x2="-6" y2="0"></line> 
+            <text dy=".4em" x="-9" y="0" style="text-anchor: end;">6,000</text>
+            </g>
+        <g class="tick" transform="translate(0,120)" style="opacity: 1;">
+            <line x2="-6" y2="0"></line> 
+            <text dy=".4em" x="-9" y="0" style="text-anchor: end;">9,000</text>
+            </g>    
+        <g class="tick" transform="translate(0,80)" style="opacity: 1;">
+            <line x2="-6" y2="0"></line> 
+            <text dy=".4em" x="-9" y="0" style="text-anchor: end;">12,000</text>
+            </g>
+        <g class="tick" transform="translate(0,40)" style="opacity: 1;">
+            <line x2="-6" y2="0"></line> 
+            <text dy=".4em" x="-9" y="0" style="text-anchor: end;">15,000</text>
+            </g>
+      </g>
+      
+      <g class="cy axis">
+        <g class="tick" transform="translate(140,200)" style="opacity: 1;">
+            <line x2="-6" x2="0"></line> 
+            <text dy=".4em" x="-9" y="0" style="text-anchor: end;">100</text>
+            </g>
+        <g class="tick" transform="translate(140,140)" style="opacity: 1;">
+            <line x2="-6" x2="0"></line> 
+            <text dy=".4em" x="-9" y="0" style="text-anchor: end;">150</text>
+            </g>
+        <g class="tick" transform="translate(140,80)" style="opacity: 1;">
+            <line x2="-6" x2="0"></line> 
+            <text dy=".4em" x="-9" y="0" style="text-anchor: end;">200</text>
+            </g>
+        
+      </g>
+
+      </svg>
+      
+      </div>
+      
+      
     </div>
     
-    <div class"column"
-      <img id="caption2" src="desktop/caption2.jpg" />
+    <div id"info1">
+      <div class="column">
+      <p class="info1">After World War II, the application of synthetic nitrogen to agricultural land grew significantly, exposing land to a new element.</p>
+    </div>
     </div>
     
-    <div class"column"
-      <img id="caption3" src="desktop/caption3.jpg" />
+    <div id"info2">
+      <div class="column">
+      <p class="info2">With the advent of synthetically applied N, farmers began to produce to higher yields, thus feeding more people on the same amount of land.</p>
+    </div>
     </div>
     
-  </div>
- 
-	  
-</body>
- 
+    <div id"info3">
+      <div class="column">
+      <p class="info3">While there is a direct correlation ofamount of N app- lied with yield, there is also a correlation with environmental harm. Is it ethical to continue applying more N for greater yield when we know the ecological harm?</p>
+    </div>
+    </div>
 <script>
 
-	d3.csv("data/n_data.csv", function(error, data) {
+	d3.csv("data/n_data.csv", function(error, data) (
+	  
 
   var markers = ["one","two","three"];
   
@@ -252,23 +379,23 @@
 		d.n = +d.n;
 		d.crop = +d.crop;
 		d.select = +d.select;
-	});
+	}));
 
 	var padding = {top: 30, right: 60, bottom: 30, left: 60};
 	var w = 600 - padding.left - padding.right;
 	var h = 270 - padding.top - padding.bottom;
 
 	var xScale = d3.time.scale()
-		.domain(d3.extent(data, function(d) { return d.date; }))
+		.domain([0,d3.max(dataset, function(d) {return d[0];})])
 		.range([0, w]);
 
 	var yScale = d3.scale.linear()
-		.domain([0, d3.max(data, function(d) { return d.n; })])
+		.domain([2000, d3.max(dataset, function(d) {return d[1];})])
 		.range([h, 0]);
 
 	var cyScale = d3.scale.linear()
-		.domain([0, d3.max(data, function(d) { return d.crop; })])
-		.range([h, 0]);
+		.domain([0, d3.max(dataset, function(d) {return d[1];})])
+		.range([1, 10]);
 
 
 	var svg = d3.select("#chart")
@@ -280,16 +407,15 @@
 
 	var nline = d3.svg.line()
 	    .x(function(d) { return xScale(d.date); })
-	    .y(function(d) { return yScale(+d.n); });
+	    .y(function(d) { return yScale(+d['n']); });
+
+  var cline = d3.svg.line()
+	    .x(function(d) { return xScale(d.date); })
+	    .y(function(d) { return cyScale(+d['crop']); });
 
 	svg.append("path")	
 		.attr("stroke", "#ff971a")
 		.attr("d", nline(data));
-
-	var cline = d3.svg.line()
-		  .defined(function(d) { return d.crop != ''; })
-	    .x(function(d) { return xScale(d.date); })
-	    .y(function(d) { return cyScale(+d.crop); });
 
 	svg.append("path")
 		.attr("stroke", "#4b5b4a")
@@ -328,7 +454,7 @@ svg.append("g").call(cyAxis)
 
 
 //------------------------------------//
-// Start of Interactive D3 Components
+// Interactive D3 Components
 
 
 		var tooltip = d3.select("#chart").append("div")
@@ -367,7 +493,7 @@ svg.append("g").call(cyAxis)
                 .duration(200)
                 .style("opacity", 1);
           		
-          		tooltip.html("trend: " + d.n + "<br> Hillary <br> Clinton")
+          		tooltip.html(": " + d.n + "<br> N <br> Crop")
           		.style("left", xScale(d.date) + -15 + "px")
                 .style("top", yScale(d.n) + "px");
 
@@ -395,5 +521,9 @@ svg.append("g").call(cyAxis)
 
 
  
-</script>
+</script> 
+	  
+</body>
+ 
+
 </html>
